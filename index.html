@@ -63,8 +63,9 @@
     }
 
     .nav-logo img {
-      height: 36px;
+      height: 52px;
       display: block;
+      mix-blend-mode: multiply;
     }
 
     .nav-links {
@@ -513,44 +514,40 @@
     }
 
     .author-card {
-      background: #fff;
+      background: var(--navy);
       border-radius: 4px;
       padding: 2rem;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .author-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(15,26,48,0.1);
+      box-shadow: 0 12px 40px rgba(15,26,48,0.25);
     }
 
-    .author-initial {
-      width: 52px;
-      height: 52px;
+    .author-photo {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue), var(--cyan));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #fff;
+      object-fit: cover;
+      object-position: center top;
       margin-bottom: 1.2rem;
+      border: 2px solid rgba(41,182,216,0.35);
+      display: block;
     }
 
     .author-name {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--navy);
+      color: #fff;
       margin-bottom: 0.3rem;
     }
 
     .author-bio {
       font-size: 0.83rem;
-      color: var(--mid);
+      color: rgba(255,255,255,0.5);
       line-height: 1.6;
       font-weight: 300;
     }
@@ -685,7 +682,7 @@
       margin-bottom: 3rem;
     }
 
-    .footer-brand img { height: 30px; margin-bottom: 1rem; filter: brightness(0) invert(1) opacity(0.85); }
+    .footer-brand img { height: 48px; margin-bottom: 1rem; opacity: 0.92; }
 
     .footer-tagline {
       font-size: 0.82rem;
@@ -791,7 +788,7 @@
 
   <!-- ═══════════════════════════════════════════════════════ NAV -->
   <nav>
-    <a class="nav-logo" href="#"><img src="revision-logo.png" alt="[Re]vision Research" /></a>
+    <a class="nav-logo" href="#"><img src="revisionlogo.png" alt="[Re]vision Research" /></a>
     <ul class="nav-links">
       <li><a href="#publicacoes">Publicações</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -973,17 +970,17 @@
 
       <div class="authors-grid">
         <div class="author-card reveal">
-          <div class="author-initial">PR</div>
+          <img class="author-photo" src="photo_pedro.jpg" alt="Pedro Roncarati" />
           <p class="author-name">Pedro Roncarati</p>
-          <p class="author-bio">Especialista em resseguros e ILS com profundo conhecimento do mercado brasileiro. Fundador da Roncarati Editora, referência em publicações técnicas do setor segurador.</p>
+          <p class="author-bio">Fundador da Roncarati Editora, referência em publicações técnicas do setor segurador.</p>
         </div>
         <div class="author-card reveal reveal-delay-1">
-          <div class="author-initial">FG</div>
+          <img class="author-photo" src="photo_galiza.jpg" alt="Francisco Galiza" />
           <p class="author-name">Francisco Galiza</p>
           <p class="author-bio">Economista com vasta experiência em análise do mercado de seguros brasileiro. Referência em pesquisa quantitativa e modelagem econômica do setor.</p>
         </div>
         <div class="author-card reveal reveal-delay-2">
-          <div class="author-initial">RB</div>
+          <img class="author-photo" src="photo_botti.jpg" alt="Rodrigo Botti" />
           <p class="author-name">Rodrigo Botti</p>
           <p class="author-bio">Profissional com ampla experiência em resseguros e mercado de capitais. Pioneiro no desenvolvimento do mercado brasileiro de ILS e Letras de Risco de Seguro.</p>
         </div>
@@ -996,9 +993,9 @@
     <div class="container">
       <p class="section-eyebrow" style="text-align:center; margin-bottom:2.5rem; reveal">Apoio Institucional</p>
       <div class="partners-inner reveal">
-        <img src="abecor-logo.png" alt="ABECOR" class="partner-img" style="height:52px;" />
+        <img src="abecorlogo.png" alt="ABECOR" class="partner-img" style="height:52px;" />
         <div class="partner-sep"></div>
-        <img src="roncarati-logo.png" alt="Roncarati Editora" class="partner-img" style="height:38px;" />
+        <img src="roncaratilogo.png" alt="Roncarati Editora" class="partner-img" style="height:38px;" />
       </div>
     </div>
   </section>
@@ -1028,7 +1025,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="revision-logo.png" alt="[Re]vision Research" />
+          <img src="revisionlogo_footer.png" alt="[Re]vision Research" />
           <p class="footer-tagline">
             Publicação trimestral independente sobre o mercado brasileiro de resseguros e Insurance-Linked Securities. Com apoio da ABECOR.
           </p>
