@@ -63,9 +63,8 @@
     }
 
     .nav-logo img {
-      height: 52px;
+      height: 36px;
       display: block;
-      mix-blend-mode: multiply;
     }
 
     .nav-links {
@@ -514,54 +513,84 @@
     }
 
     .author-card {
-      background: var(--navy);
+      background: #fff;
       border-radius: 4px;
       padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.09);
+      border: 1px solid rgba(0,0,0,0.06);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .author-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(15,26,48,0.25);
+      box-shadow: 0 12px 40px rgba(15,26,48,0.1);
     }
 
-    .author-photo {
-      width: 80px;
-      height: 80px;
+    .author-initial {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
       margin-bottom: 1.2rem;
-      border: 2px solid rgba(41,182,216,0.35);
-      display: block;
     }
 
     .author-name {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--navy);
       margin-bottom: 0.3rem;
     }
 
     .author-bio {
       font-size: 0.83rem;
-      color: rgba(255,255,255,0.5);
+      color: var(--mid);
       line-height: 1.6;
       font-weight: 300;
     }
 
+    .author-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      width: fit-content;
+    }
+
+    .author-linkedin:hover {
+      color: var(--blue);
+      border-color: var(--blue);
+      background: rgba(42,95,165,0.05);
+    }
+
+    .author-linkedin svg { width: 13px; height: 13px; flex-shrink: 0; }
+
     /* ─── PARTNERS ─────────────────────────────────────────── */
     #parceiros {
       background: var(--off-white);
-      padding: 6rem 0;
+      padding: 4rem 0;
     }
 
     .partners-inner {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 5rem;
       flex-wrap: wrap;
     }
@@ -682,7 +711,7 @@
       margin-bottom: 3rem;
     }
 
-    .footer-brand img { height: 48px; margin-bottom: 1rem; opacity: 0.92; }
+    .footer-brand img { height: 30px; margin-bottom: 1rem; filter: brightness(0) invert(1) opacity(0.85); }
 
     .footer-tagline {
       font-size: 0.82rem;
@@ -788,7 +817,7 @@
 
   <!-- ═══════════════════════════════════════════════════════ NAV -->
   <nav>
-    <a class="nav-logo" href="#"><img src="revisionlogo.png" alt="[Re]vision Research" /></a>
+    <a class="nav-logo" href="#"><img src="revision-logo.png" alt="[Re]vision Research" /></a>
     <ul class="nav-links">
       <li><a href="#publicacoes">Publicações</a></li>
       <li><a href="#sobre">Sobre</a></li>
@@ -856,7 +885,7 @@
             <li>Resultados e principais índices das resseguradoras locais — 9M25</li>
           </ul>
           <a class="pub-link"
-             href="https://drive.google.com/file/d/1qhUJrQLnuwPPUhXYi4L-apEPfBYf_ft-/view?usp=drive_link"
+             href="https://drive.google.com/file/d/1BltrR3jAaETdJ0ueVGyKC6GobFwOMLb0/view?usp=drive_link"
              target="_blank" rel="noopener">
             Acessar relatório
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -868,7 +897,7 @@
           <p class="pub-edition">2ª Edição · Março 2025</p>
           <h3 class="pub-title">Primeira LRS do Brasil e Tendências de Curto Prazo</h3>
           <ul class="pub-topics">
-            <li>Emissões históricas: 1º ILS LatAm pela Terra Brasis Re e 1ª LRS pela Andrina SSPE / Itaú BBA</li>
+            <li>Emissão histórica: primeira LRS brasileira pela Andrina SSPE / Itaú BBA</li>
             <li>Evolução do mercado de ILS no Brasil desde 2016</li>
             <li>Ranking atualizado de cedentes e resseguradoras (1T2025)</li>
             <li>Grupos verticalizados continuam ganhando participação de mercado</li>
@@ -892,7 +921,7 @@
             <li>Grupos verticalizados ampliam presença com resseguro intragrupo</li>
           </ul>
           <a class="pub-link"
-             href="https://drive.google.com/file/d/1BltrR3jAaETdJ0ueVGyKC6GobFwOMLb0/view?usp=drive_link"
+             href="https://drive.google.com/file/d/1qhUJrQLnuwPPUhXYi4L-apEPfBYf_ft-/view?usp=drive_link"
              target="_blank" rel="noopener">
             Acessar relatório
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -944,7 +973,7 @@
             Com base nos dados públicos da SUSEP e em metodologias proprietárias, cada edição traz rankings de cedentes e resseguradoras, demonstrações de resultado, métricas-chave e artigos especializados sobre temas regulatórios e estruturais do mercado.
           </p>
           <p>
-            A publicação conta com o patrocínio da ABECOR — Associação Brasileira das Empresas de Corretagem de Resseguros.
+            A publicação conta com o apoio da ABECOR — Associação Brasileira das Empresas de Corretagem de Resseguros.
           </p>
           <div class="about-tags">
             <span class="tag">Resseguros</span>
@@ -970,19 +999,22 @@
 
       <div class="authors-grid">
         <div class="author-card reveal">
-          <img class="author-photo" src="photo_botti.jpg" alt="Rodrigo Botti" />
-          <p class="author-name">Rodrigo Botti</p>
-          <p class="author-bio">Profissional com ampla experiência em resseguros e mercado de capitais. Pioneiro no desenvolvimento do mercado brasileiro de ILS e Letras de Risco de Seguro.</p>
+          <div class="author-initial">PR</div>
+          <p class="author-name">Pedro Roncarati</p>
+          <p class="author-bio">Especialista em resseguros e ILS com profundo conhecimento do mercado brasileiro. Fundador da Roncarati Editora, referência em publicações técnicas do setor segurador.</p>
+          <a class="author-linkedin" href="https://linkedin.com/in/pedro-roncarati-a048b2b7" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.869 0-2.155 1.46-2.155 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.609v5.587z"/></svg> LinkedIn</a>
         </div>
         <div class="author-card reveal reveal-delay-1">
-          <img class="author-photo" src="photo_galiza.jpg" alt="Francisco Galiza" />
+          <div class="author-initial">FG</div>
           <p class="author-name">Francisco Galiza</p>
           <p class="author-bio">Economista com vasta experiência em análise do mercado de seguros brasileiro. Referência em pesquisa quantitativa e modelagem econômica do setor.</p>
+          <a class="author-linkedin" href="https://linkedin.com/in/francisco-galiza-79289616" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.869 0-2.155 1.46-2.155 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.609v5.587z"/></svg> LinkedIn</a>
         </div>
         <div class="author-card reveal reveal-delay-2">
-          <img class="author-photo" src="photo_pedro.jpg" alt="Pedro Roncarati" />
-          <p class="author-name">Pedro Roncarati</p>
-          <p class="author-bio">Fundador da Roncarati Editora, referência em publicações técnicas do setor segurador.</p>
+          <div class="author-initial">RB</div>
+          <p class="author-name">Rodrigo Botti</p>
+          <p class="author-bio">Profissional com ampla experiência em resseguros e mercado de capitais. Pioneiro no desenvolvimento do mercado brasileiro de ILS e Letras de Risco de Seguro.</p>
+          <a class="author-linkedin" href="https://linkedin.com/in/rodrigobotti" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.869 0-2.155 1.46-2.155 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.609v5.587z"/></svg> LinkedIn</a>
         </div>
       </div>
     </div>
@@ -991,33 +1023,11 @@
   <!-- ═══════════════════════════════════════════════════════ PARTNERS -->
   <section id="parceiros">
     <div class="container">
-      <p class="section-eyebrow reveal" style="margin-bottom:0.8rem;">Idealização e Patrocínio</p>
-      <div class="partners-inner reveal" style="flex-direction:column; align-items:flex-start; gap:2.5rem;">
-        <img src="abecorlogo.png" alt="ABECOR" class="partner-img" style="height:80px; mix-blend-mode:multiply;" />
-        <div style="max-width:720px;">
-          <p style="font-size:0.95rem; line-height:1.85; color:#4a5068; font-weight:300; margin-bottom:1.4rem;">
-            É com grande satisfação que apresentamos esta publicação, desenvolvida
-            por experientes profissionais do setor de resseguros e idealizado pela
-            ABECOR — Associação Brasileira das Empresas de Corretagem de Resseguros.
-            Como presidente da entidade, é uma honra ver essa iniciativa se concretizando
-            por meio de um conteúdo técnico, relevante e alinhado com os
-            desafios e oportunidades do nosso mercado.
-          </p>
-          <p style="font-size:0.95rem; line-height:1.85; color:#4a5068; font-weight:300; margin-bottom:1.4rem;">
-            A ABECOR tem como missão fomentar o desenvolvimento do setor de corretagem
-            de resseguros no Brasil, promovendo o intercâmbio de conhecimento,
-            a valorização da atividade e o fortalecimento da atuação dos nossos
-            associados. O atual estudo reflete esse compromisso, trazendo reflexões e
-            análises que contribuem para o avanço da nossa indústria.
-          </p>
-          <p style="font-size:0.95rem; line-height:1.85; color:#4a5068; font-weight:300; margin-bottom:2rem;">
-            Convidamos todos os leitores a explorarem este material com atenção, com
-            a certeza de que ele será uma fonte valiosa de informação e inspiração para
-            todos os que atuam ou se interessam pelo universo do resseguro.
-          </p>
-          <p style="font-family:'DM Mono',monospace; font-size:0.78rem; color:var(--blue); letter-spacing:0.04em;">Eduardo Toledo Protasio de Almeida</p>
-          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; color:var(--mid); letter-spacing:0.06em; text-transform:uppercase; margin-top:0.2rem;">Presidente — ABECOR</p>
-        </div>
+      <p class="section-eyebrow" style="text-align:center; margin-bottom:2.5rem; reveal">Apoio Institucional</p>
+      <div class="partners-inner reveal">
+        <img src="abecor-logo.png" alt="ABECOR" class="partner-img" style="height:52px;" />
+        <div class="partner-sep"></div>
+        <img src="roncarati-logo.png" alt="Roncarati Editora" class="partner-img" style="height:38px;" />
       </div>
     </div>
   </section>
@@ -1047,7 +1057,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="revisionlogo_footer.png" alt="[Re]vision Research" />
+          <img src="revision-logo.png" alt="[Re]vision Research" />
           <p class="footer-tagline">
             Publicação trimestral independente sobre o mercado brasileiro de resseguros e Insurance-Linked Securities. Com apoio da ABECOR.
           </p>
@@ -1055,9 +1065,9 @@
         <div>
           <p class="footer-col-title">Publicações</p>
           <ul class="footer-links">
-            <li><a href="https://drive.google.com/file/d/1qhUJrQLnuwPPUhXYi4L-apEPfBYf_ft-/view?usp=drive_link" target="_blank" rel="noopener">3ª Edição — Jan/2026</a></li>
+            <li><a href="https://drive.google.com/file/d/1BltrR3jAaETdJ0ueVGyKC6GobFwOMLb0/view?usp=drive_link" target="_blank" rel="noopener">3ª Edição — Jan/2026</a></li>
             <li><a href="https://drive.google.com/file/d/18UYyC4af2ouEfyQ-q6v8m6owH_U80A0n/view?usp=drive_link" target="_blank" rel="noopener">2ª Edição — Mar/2025</a></li>
-            <li><a href="https://drive.google.com/file/d/1BltrR3jAaETdJ0ueVGyKC6GobFwOMLb0/view?usp=drive_link" target="_blank" rel="noopener">1ª Edição — Dez/2024</a></li>
+            <li><a href="https://drive.google.com/file/d/1qhUJrQLnuwPPUhXYi4L-apEPfBYf_ft-/view?usp=drive_link" target="_blank" rel="noopener">1ª Edição — Dez/2024</a></li>
           </ul>
         </div>
         <div>
@@ -1105,3 +1115,4 @@
   </script>
 </body>
 </html>
+
